@@ -83,11 +83,11 @@ export default {
 
 
 <style scoped>
-#app-blog * {
+#add-blog * {
   box-sizing: border-box;
 }
 
-#app-blog{
+#add-blog{
   margin: 20px auto;
   max-width: 600px;
   padding: 20px;
