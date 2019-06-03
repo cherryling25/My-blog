@@ -51,6 +51,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'add-blog',
   data () {
@@ -67,14 +68,17 @@ export default {
   },
   methods:{
     post:function(){
-      this.$http.post("http://jsonplaceholder.typicode.com/posts",{
+      //this.$http.post("http://localhost:9999/shopcenterms/order/addBlog",{
+        var _this = this;
+        axios.post("http://localhost:9999/shopcenterms/order/addBlog",{
+        name: 'cherry',
         title:this.blog.title,// post 的具体的对象
         body:  this.blog.content,
         userId:1 
       })
       .then(function(data){
-        console.log(data);
-        this.submited = true;
+        //console.log(data);
+        _this.submited = true;
       });
     }
   }
