@@ -73,7 +73,7 @@ export default {
         axios.post("http://localhost:9999/shopcenterms/order/addBlog",{
         name: 'cherry',
         title:this.blog.title,// post 的具体的对象
-        body:  this.blog.content,
+        body:this.blog.content,
         userId:1 
       })
       .then(function(data){

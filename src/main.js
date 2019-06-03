@@ -5,10 +5,14 @@ import App from './App'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import Routes from './routes'
+import axios from 'axios'
 
 Vue.config.productionTip = false
 Vue.use(VueResource)
 Vue.use(VueRouter)
+
+//全局配置 axios
+axios.defaults.baseURL = "http://jsonplaceholder.typicode.com"
 
 //全局自定义指令
 /*Vue.directive("rainbow",{
