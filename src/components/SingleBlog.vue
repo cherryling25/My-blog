@@ -8,7 +8,7 @@
 <script>
 export default {
     name:"single-blog",
-    data(){
+    data() {
         return{
              id:this.$route.params.id,
              blog:{}
