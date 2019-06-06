@@ -51,8 +51,9 @@
 </template>
 
 <script>
-
+import axios from 'axios'
 export default {
+
   name: 'add-blog',
   data () {
     return {
@@ -70,7 +71,7 @@ export default {
     post:function(){
       //this.$http.post("http://localhost:9999/shopcenterms/order/addBlog",{
         var _this = this;
-        axios.post("http://localhost:9999/shopcenterms/order/addBlog",{
+        axios.post("/posts/",{
         name: 'cherry',
         title:this.blog.title,// post 的具体的对象
         body:this.blog.content,
